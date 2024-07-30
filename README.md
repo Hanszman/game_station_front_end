@@ -5,6 +5,8 @@ Online Game Station Developed in React.js (FrontEnd)
 npx create-react-app . --template typescript
 npm install typescript @types/node @types/react @types/react-dom jest @types/jest ts-jest
 npm install socket.io-client dotenv
+npm install react@latest react-dom@latest @testing-library/react@latest
+npm install @testing-library/react@latest @testing-library/user-event@latest
 
 ## Getting Started with Create React App
 
