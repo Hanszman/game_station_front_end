@@ -7,6 +7,7 @@ npm install typescript @types/node @types/react @types/react-dom jest @types/jes
 npm install socket.io-client dotenv
 npm install react@latest react-dom@latest @testing-library/react@latest
 npm install @testing-library/react@latest @testing-library/user-event@latest
+npm install axios
 
 ## Getting Started with Create React App
 

@@ -1,13 +1,19 @@
 import React from 'react';
+import { useEffect } from 'react';
 import logo from './logo.svg';
 import { io } from 'socket.io-client';
 import './App.css';
 const socket = io('http://localhost:3001');
 
 function App() {
-  socket.on('connect', () => {
-    console.log('connected');
-  });
+  useEffect(() => {
+    socket.on('connect', () => {
+      console.log('connected');
+    });
+    return () => {
+      socket.disconnect();
+    };
+  }, []);
   return (
     <div className="App">
       <header className="App-header">

@@ -1,1 +1,5 @@
-global.setImmediate = (fn) => setTimeout(fn, 0);
+if (typeof setImmediate === 'undefined') {
+    global.setImmediate = function(fn) {
+        setTimeout(fn, 0);
+    };
+}
