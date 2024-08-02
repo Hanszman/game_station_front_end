@@ -1,12 +1,18 @@
 import React from 'react';
 import { useEffect } from 'react';
 import logo from './logo.svg';
+import Api from './services/Api';
 import { io } from 'socket.io-client';
 import './App.css';
 const socket = io('http://localhost:3001');
 
 function App() {
   useEffect(() => {
+    console.log('env:', process.env);
+    console.log('API URL:', process.env.REACT_APP_API_URL);
+    Api.get('/db').then(res => {
+      console.log('res', res);
+    });
     socket.on('connect', () => {
       console.log('connected');
     });
