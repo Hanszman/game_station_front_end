@@ -1,6 +1,8 @@
-import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
-import logo from './logo.svg';
+import Home from './components/Home/Home';
+import Game from './components/Game/Game';
+import User from './components/User/User';
 import Api from './services/Api';
 import { io } from 'socket.io-client';
 import './App.css';
@@ -22,20 +24,15 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <div className='container'>
+          <Routes>
+            <Route path='/' element={<Home/>}></Route>
+            <Route path='/game' element={<Game/>}></Route>
+            <Route path='/user' element={<User/>}></Route>
+          </Routes>
+        </div>
+      </Router>
     </div>
   );
 }
