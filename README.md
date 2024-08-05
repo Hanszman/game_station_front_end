@@ -9,6 +9,7 @@ npm install react@latest react-dom@latest @testing-library/react@latest
 npm install @testing-library/react@latest @testing-library/user-event@latest
 npm install axios react-dotenv
 npm install react-router-dom
+npm install sass
 
 ## Getting Started with Create React App
 
