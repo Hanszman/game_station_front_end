@@ -4,12 +4,13 @@ Online Game Station Developed in React.js (FrontEnd)
 # Creating Project Commands:
 npx create-react-app . --template typescript
 npm install typescript @types/node @types/react @types/react-dom jest @types/jest ts-jest
-npm install socket.io-client dotenv
 npm install react@latest react-dom@latest @testing-library/react@latest
 npm install @testing-library/react@latest @testing-library/user-event@latest
-npm install axios react-dotenv
+npm install socket.io-client
+npm install axios dotenv react-dotenv
 npm install react-router-dom
-npm install sass
+npm install sass react-icons bootstrap
+npm install i18next react-i18next
 
 ## Getting Started with Create React App
 

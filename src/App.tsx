@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
-import Home from './components/Home/Home';
-import Game from './components/Game/Game';
-import Chat from './components/Chat/Chat';
-import User from './components/User/User';
+import Home from './components/pages/home/Home';
+import Game from './components/pages/game/Game';
+import Chat from './components/layout/chat/Chat';
+import User from './components/pages/user/User';
 import { apiLink, api } from './services/Api';
 import './App.css';
 
