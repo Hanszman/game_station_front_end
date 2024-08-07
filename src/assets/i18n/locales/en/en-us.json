@@ -1,11 +1,11 @@
 {
     "translation": {
-        "language": "Language",
-        "languages": "Languages",
+        "Language": "Language",
+        "Languages": "Languages",
         "Portuguese": "Portuguese",
         "English": "English",
         "Brazil": "Brazil",
         "USA": "USA",
-        "home": "Home"
+        "Home": "Home"
     }
 }

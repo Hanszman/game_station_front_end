@@ -7,7 +7,7 @@ function Home() {
     return (
         <div>
             <Translation/>
-            {(t('home'))}
+            {(t('Home'))}
         </div>
     );
 }
