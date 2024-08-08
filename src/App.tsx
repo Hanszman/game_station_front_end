@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     console.log('env:', process.env);
     console.log('API URL:', apiLink);
-    api.get('/db').then(res => {
+    api.get('/db').then((res: any) => {
       console.log('res', res);
     });
   }, []);
