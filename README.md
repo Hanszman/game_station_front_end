@@ -13,7 +13,7 @@ npm install react-router-dom
 npm install sass react-icons bootstrap
 npm install i18next react-i18next
 npm install @babel/plugin-proposal-private-property-in-object
-npm install @babel/preset-env @babel/preset-react @babel/preset-typescript babel-jest
+npm install @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript babel-jest
 
 ## Getting Started with Create React App
 

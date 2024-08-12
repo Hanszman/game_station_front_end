@@ -1,4 +1,4 @@
-import axios from 'axios';
+const axios = require('axios');
 
 const apiLink = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL.toString() : '';
 const api = axios.create({
