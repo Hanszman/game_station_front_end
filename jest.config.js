@@ -2,13 +2,14 @@ module.exports = {
     preset: 'ts-jest',
     testEnvironment: 'jsdom',
     transform: {
-        '^.+\\.tsx?$': 'ts-jest',
+        '^.+\\.tsx?$': 'babel-jest',
+        '^.+\\.jsx?$': 'babel-jest',
     },
     moduleNameMapper: {
-        '\\.(css|less|scss)$': 'identity-obj-proxy',
+        '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     },
     transformIgnorePatterns: [
-        '/node_modules/(?!axios)',
+        '/node_modules/(?!(axios|socket.io-client)/)',
     ],
     setupFilesAfterEnv: ['./jest.setup.js', '<rootDir>/src/setupTests.ts'],
     testMatch: ['**/__tests__/**/*.+(ts|tsx|js)', '**/?(*.)+(spec|test).+(ts|tsx|js)'],
