@@ -6,6 +6,7 @@ npx create-react-app . --template typescript
 npm install typescript @types/node @types/react @types/react-dom jest @types/jest ts-jest
 npm install react@latest react-dom@latest @testing-library/react@latest @testing-library/jest-dom
 npm install @testing-library/react@latest @testing-library/user-event@latest
+npm install react-scripts@latest
 npm install socket.io-client
 npm install axios dotenv react-dotenv
 npm install react-router-dom
