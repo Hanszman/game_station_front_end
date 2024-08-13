@@ -2,8 +2,7 @@ module.exports = {
     preset: 'ts-jest',
     testEnvironment: 'jsdom',
     transform: {
-        '^.+\\.(ts|tsx)$': 'ts-jest',
-        '^.+\\.jsx?$': 'babel-jest',
+        '^.+\\.(ts|tsx|js|jsx|mjs)$': 'jest-esm-transformer',
     },
     moduleNameMapper: {
         '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
