@@ -4,13 +4,11 @@ import Home from './components/pages/home/Home';
 import Game from './components/pages/game/Game';
 import Chat from './components/layout/chat/Chat';
 import User from './components/pages/user/User';
-import { apiLink, api } from './services/Api';
+import { api } from './services/Api';
 import './App.css';
 
 function App() {
   useEffect(() => {
-    console.log('env:', process.env);
-    console.log('API URL:', apiLink);
     api.get('/db').then((res: any) => {
       console.log('res', res);
     });

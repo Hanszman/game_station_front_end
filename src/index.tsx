@@ -5,7 +5,6 @@ import reportWebVitals from './reportWebVitals';
 import './assets/i18n';
 import './index.css';
 
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

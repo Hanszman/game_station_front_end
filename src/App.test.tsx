@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from './test-utils';
 import App from './App';
 import { api } from './services/Api';
 jest.mock('./services/Api');
