@@ -19,12 +19,19 @@
         "isolatedModules": true,
         "noEmit": true,
         "jsx": "react-jsx",
-        "typeRoots": ["./node_modules/@types", "./src"]
+        "baseUrl": "./",
+        "paths": {
+            "components/*": ["src/components/*"],
+            "services/*": ["src/services/*"],
+            "__mocks__/*": ["src/__mocks__/*"],
+            "assets/*": ["src/assets/*"]
+        },
+        "typeRoots": ["node_modules/@types", "src"]
     },
-    "include": ["src/**/*"],
+    "include": ["src/**/*", "global.d.ts"],
     "exclude": [
         "node_modules",
-        "**/__mocks__",
-        "**/assets"
+        "src/__mocks__",
+        "src/assets"
     ]
 }
