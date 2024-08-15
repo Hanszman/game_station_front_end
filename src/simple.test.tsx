@@ -1,3 +1,5 @@
+export {};
+
 test('simple test 1', () => {
     expect(true).toBe(true);
 });
