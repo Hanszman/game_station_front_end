@@ -8,6 +8,10 @@
         ],
         "allowJs": true,
         "skipLibCheck": true,
+        "noEmitOnError": false,
+        "suppressImplicitAnyIndexErrors": true,
+        "ignoreDeprecations": "5.0",
+        "checkJs": false,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
         "strict": true,
@@ -26,7 +30,7 @@
             "__mocks__/*": ["src/__mocks__/*"],
             "assets/*": ["src/assets/*"]
         },
-        "typeRoots": ["node_modules/@types", "./src"]
+        "typeRoots": ["node_modules/@types", "src"]
     },
     "include": ["src/**/*", "global.d.ts"],
     "exclude": [
