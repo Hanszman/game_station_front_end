@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
+import Header from './components/layout/header/Header';
+import Footer from './components/layout/footer/Footer';
 import Home from './components/pages/home/Home';
 import Game from './components/pages/game/Game';
 import Chat from './components/layout/chat/Chat';
@@ -22,6 +24,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <Header/>
         <div className='container'>
           <Routes>
             <Route path='/' element={<Home/>}></Route>
@@ -30,6 +33,7 @@ function App() {
             <Route path='/chat' element={<Chat/>}></Route>
           </Routes>
         </div>
+        <Footer/>
       </Router>
     </div>
   );
