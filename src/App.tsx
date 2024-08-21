@@ -9,11 +9,13 @@ import User from './components/pages/user/User';
 import { api } from './services/Api';
 import './App.css';
 
-// TODO: Create layout for chat
-// TODO: Create layout for user
+// TODO: Create layout for home
 // TODO: Create layout for games
+// TODO: Create logic for games
 // TODO: Create DB with games, users and images
 // TODO: Create login logic with cryptography
+// TODO: Create layout for user
+// TODO: Create layout for chat
 
 function App() {
   useEffect(() => {

@@ -6,6 +6,9 @@
         "English": "English",
         "Brazil": "Brazil",
         "USA": "USA",
-        "Home": "Home"
+        "Home": "Home",
+        "Game": "Game",
+        "User": "User",
+        "Chat": "Chat"
     }
 }

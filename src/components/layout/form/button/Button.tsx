@@ -1,10 +1,14 @@
 import './Button.scss';
 
-function Button() {
+function Button(props: any) {
     return (
-        <div>
-            Button
-        </div>
+        <button
+            type={props.type}
+            className='formButton'
+            onClick={props.handleOnClick}
+        >
+            {props.children}
+        </button>
     );
 }
 

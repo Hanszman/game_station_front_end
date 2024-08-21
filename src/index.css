@@ -1,9 +1,85 @@
-* {
+html, * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1.5px;
 }
 html, body, #root {
   background-color: white;
   height: 100%;
+}
+.text {
+  color: #373b3e;
+  padding: 0;
+  margin: 0;
+}
+.highText {
+  color: #7089fa;
+}
+.boldText {
+  font-weight: bold;
+}
+.italicText {
+  font-style: italic;
+}
+.centerText {
+  text-align: center;
+}
+.displayFlex {
+  display: flex;
+}
+.flexWrap {
+  flex-wrap: wrap;
+}
+.formInput, .formSelect {
+  margin: 5px;
+}
+.formInput label, .formSelect label {
+  color: #7089fa;
+  margin-bottom: 5px;
+}
+.formInput input, .formSelect select {
+  border: 1px solid #d3d3d3;
+  border-radius: 10px;
+  outline: none;
+  padding: 5px 10px;
+}
+.hideLabel {
+  margin: 3px 0px;
+}
+.formButton {
+  color: white;
+  background-color: #7089fa;
+  border: none;
+  border-radius: 7px;
+  padding: 5px 10px;
+  outline: none;
+}
+.formButton:hover {
+  color: #7089fa;
+  background-color: white;
+  border: 1px solid #7089fa;
+  padding: 4px 9px;
+}
+.btnFilter {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin: 8px 10px;
+}
+.chartTitle {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+}
+@media only screen and (max-width: 500px) {
+  .formInput input, .formSelect select {
+    max-width: 150px;
+    word-wrap: break-word;
+  }
 }
