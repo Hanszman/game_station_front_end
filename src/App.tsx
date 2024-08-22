@@ -7,7 +7,7 @@ import Game from './components/pages/game/Game';
 import Chat from './components/layout/chat/Chat';
 import User from './components/pages/user/User';
 import { api } from './services/Api';
-import './App.css';
+import './App.scss';
 
 // TODO: Create layout for home
 // TODO: Create layout for games
@@ -27,7 +27,7 @@ function App() {
     <div className="App">
       <Router>
         <Header/>
-        <div className='container'>
+        <div className='containerDisplay'>
           <Routes>
             <Route path='/' element={<Home/>}></Route>
             <Route path='/game' element={<Game/>}></Route>

@@ -10,7 +10,7 @@ npm install react-scripts@latest
 npm install socket.io-client
 npm install axios dotenv react-dotenv
 npm install react-router-dom
-npm install sass react-icons bootstrap
+npm install sass react-icons bootstrap react-bootstrap flag-icon-css
 npm install i18next react-i18next
 npm install @babel/plugin-proposal-private-property-in-object
 npm install @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript babel-jest
