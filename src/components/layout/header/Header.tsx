@@ -16,22 +16,22 @@ function Header() {
                 <Link to='/'>
                     <FaHome
                         className={`imgLogo ${stateImg}`}
-                        onMouseEnter={() => setStateImg('logoWhite')}
+                        onMouseOver={() => setStateImg('logoWhite')}
                         onMouseOut={() => setStateImg('logoBlue')}
                     />
                 </Link>
                 <ul className={showNavList ? 'list active' : 'list'}>
                     <li className='item'>
-                        <Link to='/'>{t('Home')}</Link>
+                        <Link className='itemLink' to='/'>{t('Home')}</Link>
                     </li>
                     <li className='item'>
-                        <Link to='/game'>{t('Game')}</Link>
+                        <Link className='itemLink' to='/game'>{t('Game')}</Link>
                     </li>
                     <li className='item'>
-                        <Link to='/user'>{t('User')}</Link>
+                        <Link className='itemLink' to='/user'>{t('User')}</Link>
                     </li>
                     <li className='item'>
-                        <Link to='/chat'>{t('Chat')}</Link>
+                        <Link className='itemLink' to='/chat'>{t('Chat')}</Link>
                     </li>
                 </ul>
                 <div className='displayFlex'>
