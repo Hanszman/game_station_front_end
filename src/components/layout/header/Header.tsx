@@ -1,10 +1,10 @@
-import './Header.scss';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { FaHome, FaBars } from 'react-icons/fa';
 import Translation from '../translation/Translation';
 import Button from '../form/button/Button';
+import './Header.scss';
 
 function Header() {
     const { t } = useTranslation();
@@ -25,13 +25,10 @@ function Header() {
                         <Link className='itemLink' to='/'>{t('Home')}</Link>
                     </li>
                     <li className='item'>
-                        <Link className='itemLink' to='/game'>{t('Game')}</Link>
+                        <Link className='itemLink' to='/games'>{t('Games')}</Link>
                     </li>
                     <li className='item'>
                         <Link className='itemLink' to='/user'>{t('User')}</Link>
-                    </li>
-                    <li className='item'>
-                        <Link className='itemLink' to='/chat'>{t('Chat')}</Link>
                     </li>
                 </ul>
                 <div className='displayFlex'>

@@ -3,8 +3,7 @@ import { useEffect } from 'react';
 import Header from './components/layout/header/Header';
 import Footer from './components/layout/footer/Footer';
 import Home from './components/pages/home/Home';
-import Game from './components/pages/game/Game';
-import Chat from './components/layout/chat/Chat';
+import Games from './components/pages/games/Games';
 import User from './components/pages/user/User';
 import { api } from './services/Api';
 import './App.scss';
@@ -30,9 +29,8 @@ function App() {
         <div className='containerDisplay'>
           <Routes>
             <Route path='/' element={<Home/>}></Route>
-            <Route path='/game' element={<Game/>}></Route>
+            <Route path='/games' element={<Games/>}></Route>
             <Route path='/user' element={<User/>}></Route>
-            <Route path='/chat' element={<Chat/>}></Route>
           </Routes>
         </div>
         <Footer/>
