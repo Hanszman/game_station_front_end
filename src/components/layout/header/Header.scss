@@ -8,17 +8,17 @@
         justify-content: space-between;
         align-items: center;
         padding: 10px;
-        background-color: #373b3e;
+        background-color: transparent;
         .imgLogo {
             width: auto;
             height: 50px;
             margin: 0 10px;
         }
-        .logoBlue {
+        .logoNormal {
             color: #23A8EB;
         }
-        .logoWhite {
-            color: white;
+        .logoHover {
+            color: #1C86BC;
         }
         .list {
             display: flex;
@@ -31,11 +31,16 @@
             .item {
                 margin: 5px 10px;
                 .itemLink {
-                    color: white;
+                    color: #23A8EB;
                     text-decoration: none;
                 }
                 .itemLink:hover {
-                    color: #23A8EB;
+                    color: #1C86BC;
+                }
+                .itemIcon {
+                    height: 14px;
+                    width: auto;
+                    margin: 0 5px;
                 }
             }
         }        
@@ -49,7 +54,7 @@
         }
     }
 }
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
     .header {
         .navbar {
             .list {
@@ -58,7 +63,7 @@
                 right: -300px;
                 flex-direction: column;
                 align-items: center;
-                text-align: center;
+                text-align: left;
                 padding: 10px 0;
                 background-color: white;
                 border-radius: 7px;
