@@ -1,9 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import './User.scss';
 
 function User() {
+    const { t } = useTranslation();
     return (
         <div>
-            User
+            {(t('User'))}
         </div>
     );
 }

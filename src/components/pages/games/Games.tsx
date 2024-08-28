@@ -1,9 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import './Games.scss';
 
 function Games() {
+    const { t } = useTranslation();
     return (
         <div>
-            Games
+            {(t('Games'))}
         </div>
     );
 }
