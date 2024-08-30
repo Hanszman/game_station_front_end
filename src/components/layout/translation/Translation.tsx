@@ -1,16 +1,12 @@
-// Imports
-import './Translation.scss';
 import { useTranslation } from 'react-i18next';
 import { changeLanguage } from 'i18next';
 import { FaGlobe } from 'react-icons/fa';
 import languagesJson from '../../../assets/i18n/languages.json';
+import './Translation.scss';
 
-// Component
 function Translation() {
-    // Declarations
     const { t } = useTranslation();
     const languages = languagesJson.languages;
-
     return (
         <div className='dropdown dropdownTranslation'>
             <button
@@ -45,5 +41,4 @@ function Translation() {
     );
 }
 
-// Exportation
 export default Translation;

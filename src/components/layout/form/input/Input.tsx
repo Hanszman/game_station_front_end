@@ -2,7 +2,7 @@ import './Input.scss';
 
 function Input() {
     return (
-        <div>
+        <div className='formInput'>
             Input
         </div>
     );
