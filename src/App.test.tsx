@@ -1,6 +1,6 @@
 import { render, waitFor } from './test-utils';
 import App from './App';
-import i18n from './assets/i18n/index';
+import i18n from './assets/i18n/i18n';
 import { api } from './services/Api';
 jest.mock('./services/Api');
 

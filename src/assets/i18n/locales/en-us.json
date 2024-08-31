@@ -9,6 +9,9 @@
         "Home": "Home",
         "Games": "Games",
         "User": "User",
-        "Chat": "Chat"
+        "Chat": "Chat",
+        "WelcomeToGameStation": "Welcome to Game Station",
+        "HereYouCanPlay": "Here you can play some funny games",
+        "OrLogInToPlayWithFriends": "Or login to play with your friends"
     }
 }

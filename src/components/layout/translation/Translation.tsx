@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { changeLanguage } from 'i18next';
-import { FaGlobe } from 'react-icons/fa';
+import { FaGlobeAmericas } from 'react-icons/fa';
 import languagesJson from '../../../assets/i18n/languages.json';
 import './Translation.scss';
 
@@ -16,7 +16,7 @@ function Translation() {
                 data-bs-toggle='dropdown'
                 aria-expanded='false'
             >
-                <FaGlobe/>
+                <FaGlobeAmericas/>
             </button>
             <ul
                 className='dropdown-menu menuTranslation'

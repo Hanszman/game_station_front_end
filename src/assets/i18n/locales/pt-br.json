@@ -9,6 +9,9 @@
         "Home": "Início",
         "Games": "Jogos",
         "User": "Usuário",
-        "Chat": "Conversa"
+        "Chat": "Conversa",
+        "WelcomeToGameStation": "Bem-vindo ao Game Station",
+        "HereYouCanPlay": "Aqui você pode jogar alguns jogos divertidos",
+        "OrLogInToPlayWithFriends": "Ou fazer login para jogar com seus amigos"
     }
 }

@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/js/bootstrap.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'flag-icon-css/css/flag-icons.min.css';
-import './assets/i18n';
+import './assets/i18n/i18n';
 import './index.scss';
 
 const root = ReactDOM.createRoot(
