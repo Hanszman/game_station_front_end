@@ -4,11 +4,10 @@ import './Home.scss';
 function Home() {
     const { t } = useTranslation();
     return (
-        <div className='home'>
-            {(t('Home'))}
-            <div>{(t('WelcomeToGameStation'))}</div>
-            <div>{(t('HereYouCanPlay'))}</div>
-            <div>{(t('OrLogInToPlayWithFriends'))}</div>
+        <div className='home centerContainer'>
+            <div className='highText boldText veryBigText'>{(t('WelcomeToGameStation'))}</div>
+            <div className='text bigText'>{(t('HereYouCanPlay'))}</div>
+            <div className='text italicText'>{(t('OrLogInToPlayWithFriends'))}</div>
         </div>
     );
 }

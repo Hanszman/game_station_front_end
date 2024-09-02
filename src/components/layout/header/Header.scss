@@ -1,3 +1,4 @@
+@import '../../../variables';
 .header {
     position: fixed;
     top: 0;
@@ -15,10 +16,10 @@
             margin: 0 10px;
         }
         .logoNormal {
-            color: #23A8EB;
+            color: $primary-color;
         }
         .logoHover {
-            color: #1C86BC;
+            color: $active-color;
         }
         .list {
             display: flex;
@@ -31,11 +32,11 @@
             .item {
                 margin: 5px 10px;
                 .itemLink {
-                    color: #23A8EB;
+                    color: $primary-color;
                     text-decoration: none;
                 }
                 .itemLink:hover {
-                    color: #1C86BC;
+                    color: $active-color;
                 }
                 .itemIcon {
                     height: 14px;
@@ -65,22 +66,22 @@
                 align-items: center;
                 text-align: left;
                 padding: 10px 0;
-                background-color: white;
+                background-color: $secondary-color;
                 border-radius: 7px;
                 border: 0.5px solid;
-                box-shadow: 0.1px 0.1px #373b3e;
+                box-shadow: 0.1px 0.1px $text-color;
                 .item {
                     width: 100%;
                     margin: 0 10px;
                     .itemLink {
-                        color: #373b3e;
-                        background-color: white;
+                        color: $text-color;
+                        background-color: $secondary-color;
                         display: block;
                         padding: 5px 15px;
                     }
                     .itemLink:hover {
-                        color: white;
-                        background-color: #23A8EB;
+                        color: $secondary-color;
+                        background-color: $primary-color;
                     }
                 }
             }

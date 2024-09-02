@@ -1,3 +1,4 @@
+@import '../../../variables';
 .dropdownTranslation {
     padding: 0;
     margin: 0 10px;
@@ -10,15 +11,15 @@
 }
 .menuTranslation {
     border: 0.5px solid;  
-    box-shadow: 0.1px 0.1px #373b3e;
+    box-shadow: 0.1px 0.1px $text-color;
     right: 0;
     left: auto !important;
     .itemTranslation {
-        color: #373b3e;
-        background-color: white;
+        color: $text-color;
+        background-color: $secondary-color;
     }
     .itemTranslation:hover {
-        color: white;
-        background-color: #23A8EB;
+        color: $secondary-color;
+        background-color: $primary-color;
     }
 }

@@ -13,8 +13,5 @@ describe('Home Component', () => {
             const element = container.querySelector('.home');
             expect(element).toBeInTheDocument();
         });
-        await waitFor(() => {
-            expect(screen.getByText(/home/i)).toBeInTheDocument();
-        });
     });
 });

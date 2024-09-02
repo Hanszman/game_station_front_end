@@ -1,3 +1,4 @@
+@import 'variables';
 html, * {
   padding: 0;
   margin: 0;
@@ -7,7 +8,7 @@ html, * {
   letter-spacing: 1.5px;
 }
 html, body, #root {
-  background-color: white;
+  background-color: $secondary-color;
   height: 100%;
 }
 ul, li {
@@ -15,12 +16,12 @@ ul, li {
   margin: 0;
 }
 .text {
-  color: #373b3e;
+  color: $text-color;
   padding: 0;
   margin: 0;
 }
 .highText {
-  color: #23A8EB;
+  color: $primary-color;
 }
 .boldText {
   font-weight: bold;
@@ -31,16 +32,31 @@ ul, li {
 .centerText {
   text-align: center;
 }
+.smallText {
+  font-size: 14px;
+}
+.bigText {
+  font-size: 24px;
+}
+.veryBigText {
+  font-size: 35px;
+}
 .displayFlex {
   display: flex;
 }
 .flexWrap {
   flex-wrap: wrap;
 }
+.centerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .formInput, .formSelect {
   margin: 5px;
   label {
-    color: #23A8EB;
+    color: $primary-color;
     margin-bottom: 5px;
   }
   input, select {
@@ -54,17 +70,17 @@ ul, li {
   margin: 3px 0px;
 }
 .formButton {
-  color: white;
-  background-color: #23A8EB;
+  color: $secondary-color;
+  background-color: $primary-color;
   border: none;
   border-radius: 7px;
   padding: 5px 10px;
   outline: none;
 }
 .formButton:hover {
-  color: #23A8EB;
-  background-color: white;
-  border: 1px solid #23A8EB;
+  color: $primary-color;
+  background-color: $secondary-color;
+  border: 1px solid $primary-color;
   padding: 4px 9px;
 }
 .btnFilter {
@@ -72,14 +88,6 @@ ul, li {
   align-items: flex-end;
   justify-content: flex-end;
   margin: 8px 10px;
-}
-.chartTitle {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  margin: 0px;
-  padding: 0px;
 }
 @media only screen and (max-width: 500px) {
   .formInput {
