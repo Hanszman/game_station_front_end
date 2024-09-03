@@ -6,7 +6,7 @@ function Footer() {
     const currentDate = new Date();
     const currentYear = currentDate.getFullYear();
     return (
-        <div className='footer'>
+        <div className='footer centerContainer'>
             &copy; {currentYear} &#183; Game Station &#183; Belo Horizonte, {t('Brazil')}
         </div>
     );
