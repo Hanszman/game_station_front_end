@@ -12,7 +12,11 @@
         "Chat": "Chat",
         "WelcomeToGameStation": "Welcome to Game Station!",
         "HereYouCanPlay": "Here you can play some funny games",
+        "checkOutGameList": "Check out the list of games",
         "OrLogInToPlayWithFriends": "Or login to play with your friends",
-        "checkOutGameList": "Check out the list of games"
+        "Login": "Login",
+        "Signup": "Signup",
+        "AlreadyHaveAnAccount": "Already have an account?",
+        "DontHaveAnAccount": "Don't have and account yet?"
     }
 }
