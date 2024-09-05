@@ -12,10 +12,13 @@ function Home() {
     const [showLoginOrSignup, setShowLoginOrSignup] = useState(true);
     return (
         <div className='home centerContainer'>
-            <div className='highText boldText veryBigText'>{(t('WelcomeToGameStation'))}</div>
+            <div className='titleText'>
+                <div className='primaryText boldText veryBigText'>{(t('WelcomeTo'))}&nbsp;</div>
+                <div className='secondaryText boldText veryBigText'>{(t('GameStation'))}</div>
+            </div>
             <div className='text bigText'>{(t('HereYouCanPlay'))}</div>
             <div className='gameListLink'>
-                <Link className='formButton' to='/games'>
+                <Link className='primaryLink' to='/games'>
                     <FaGamepad className='linkIcon'/>
                     {t('checkOutGameList')}
                 </Link>
@@ -23,16 +26,16 @@ function Home() {
             <div className='text italicText'>{(t('OrLogInToPlayWithFriends'))}</div>
             <div className='loginAndSignup'>
                 {showLoginOrSignup ? <Login/> : <Signup/>}
-                <Button
-                    type='button'
-                    handleOnClick={() => setShowLoginOrSignup(!showLoginOrSignup)}
+                <a
+                    className='secondaryLink'
+                    onClick={() => setShowLoginOrSignup(!showLoginOrSignup)}
                 >
                     {
                         showLoginOrSignup
                         ? t('DontHaveAnAccount') + ' ' + t('Signup')
                         : t('AlreadyHaveAnAccount') + ' ' + t('Login')
                     }
-                </Button>
+                </a>
             </div>
         </div>
     );

@@ -1,4 +1,8 @@
 .home {
+    .titleText {
+        display: flex;
+        flex-direction: row;
+    }
     .gameListLink {
         margin: 10px 0px;
         .linkIcon {

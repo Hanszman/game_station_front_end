@@ -23,19 +23,19 @@ function Header() {
                 </Link>
                 <ul className={showNavList ? 'list active' : 'list'}>
                     <li className='item'>
-                        <Link className='itemLink' to='/'>
+                        <Link className='primaryLink itemLink' to='/'>
                             <FaHome className='itemIcon'/>
                             {t('Home')}
                         </Link>
                     </li>
                     <li className='item'>
-                        <Link className='itemLink' to='/games'>
+                        <Link className='primaryLink itemLink' to='/games'>
                             <FaGamepad className='itemIcon'/>
                             {t('Games')}
                         </Link>
                     </li>
                     <li className='item'>
-                        <Link className='itemLink' to='/user'>
+                        <Link className='primaryLink itemLink' to='/user'>
                             <FaUser className='itemIcon'/>
                             {t('User')}
                         </Link>
@@ -46,6 +46,7 @@ function Header() {
                     <div className='btnMenu'>
                         <Button
                             type='button'
+                            classes='primaryButton'
                             handleOnClick={() => setShowNavList(!showNavList)}
                         >
                             <FaBars/>

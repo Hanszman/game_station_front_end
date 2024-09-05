@@ -9,7 +9,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 10px;
-        background-color: $secondary-color;
+        background-color: $off-white-color;
         .imgLogo {
             width: auto;
             height: 50px;
@@ -19,7 +19,7 @@
             color: $primary-color;
         }
         .logoHover {
-            color: $active-color;
+            color: $primary-active-color;
         }
         .list {
             display: flex;
@@ -31,13 +31,6 @@
             }
             .item {
                 margin: 5px 10px;
-                .itemLink {
-                    color: $primary-color;
-                    text-decoration: none;
-                }
-                .itemLink:hover {
-                    color: $active-color;
-                }
                 .itemIcon {
                     height: 14px;
                     width: auto;
@@ -66,7 +59,7 @@
                 align-items: center;
                 text-align: left;
                 padding: 10px 0;
-                background-color: $secondary-color;
+                background-color: $off-white-color;
                 border-radius: 7px;
                 border: 0.5px solid;
                 box-shadow: 0.1px 0.1px $text-color;
@@ -75,12 +68,12 @@
                     margin: 0 10px;
                     .itemLink {
                         color: $text-color;
-                        background-color: $secondary-color;
+                        background-color: $off-white-color;
                         display: block;
                         padding: 5px 15px;
                     }
                     .itemLink:hover {
-                        color: $secondary-color;
+                        color: $off-white-color;
                         background-color: $primary-color;
                     }
                 }

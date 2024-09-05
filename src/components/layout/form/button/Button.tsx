@@ -4,7 +4,7 @@ function Button(props: any) {
     return (
         <button
             type={props.type}
-            className='formButton'
+            className={`formButton ${props.classes}`}
             onClick={props.handleOnClick}
         >
             {props.children}

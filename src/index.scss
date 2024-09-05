@@ -8,7 +8,7 @@ html, * {
   letter-spacing: 1.5px;
 }
 html, body, #root {
-  background-color: $secondary-color;
+  background-color: $off-white-color;
   height: 100%;
 }
 ul, li {
@@ -20,8 +20,11 @@ ul, li {
   padding: 0;
   margin: 0;
 }
-.highText {
+.primaryText {
   color: $primary-color;
+}
+.secondaryText {
+  color: $secondary-color;
 }
 .boldText {
   font-weight: bold;
@@ -72,8 +75,7 @@ ul, li {
   margin: 3px 0px;
 }
 .formButton {
-  color: $secondary-color;
-  background-color: $primary-color;
+  color: $off-white-color;
   border: none;
   border-radius: 7px;
   padding: 5px 10px;
@@ -86,10 +88,38 @@ ul, li {
   flex-wrap: wrap;
 }
 .formButton:hover {
-  color: $primary-color;
-  background-color: $secondary-color;
-  border: 1px solid $primary-color;
+  background-color: $off-white-color;
   padding: 4px 9px;
+}
+.primaryButton {
+  background-color: $primary-color;
+}
+.primaryButton:hover {
+  color: $primary-color;
+  border: 1px solid $primary-color;
+}
+.secondaryButton {
+  background-color: $secondary-color;
+}
+.secondaryButton:hover {
+  color: $secondary-color;
+  border: 1px solid $secondary-color;
+}
+.primaryLink {
+  color: $primary-color;
+}
+.primaryLink:hover {
+  color: $primary-active-color;
+}
+.secondaryLink {
+  color: $secondary-color;
+}
+.secondaryLink:hover {
+  color: $secondary-active-color;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
 }
 .btnFilter {
   display: flex;
