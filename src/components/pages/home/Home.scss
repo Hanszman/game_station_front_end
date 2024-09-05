@@ -10,3 +10,10 @@
         }
     }
 }
+@media only screen and (max-width: 580px) {
+    .home {
+        .titleText {
+            flex-direction: column;
+        }
+    }
+}
