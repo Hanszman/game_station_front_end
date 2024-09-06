@@ -1,16 +1,16 @@
 import { render, waitFor } from '../../../test-utils';
 import { MemoryRouter } from 'react-router-dom';
-import Signup from './Signup';
+import Auth from './Auth';
 
-describe('Signup Component', () => {
-    test('Should render Signup component', async () => {
+describe('Auth Component', () => {
+    test('Should render Auth component', async () => {
         const { container } = render(
             <MemoryRouter>
-                <Signup/>
+                <Auth/>
             </MemoryRouter>
         );
         await waitFor(() => {
-            const element = container.querySelector('.signup');
+            const element = container.querySelector('.auth');
             expect(element).toBeInTheDocument();
         });
     });

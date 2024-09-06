@@ -117,7 +117,7 @@ ul, li {
 .secondaryLink:hover {
   color: $secondary-active-color;
 }
-a {
+a, .link {
   cursor: pointer;
   text-decoration: none;
 }

@@ -1,15 +1,11 @@
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { FaGamepad } from 'react-icons/fa';
-import Login from '../../layout/login/Login';
-import Signup from '../../layout/signup/Signup';
-import Button from '../../layout/form/button/Button';
+import Auth from '../../layout/auth/Auth';
 import './Home.scss';
 
 function Home() {
     const { t } = useTranslation();
-    const [showLoginOrSignup, setShowLoginOrSignup] = useState(true);
     return (
         <div className='home centerContainer'>
             <div className='titleText'>
@@ -24,19 +20,7 @@ function Home() {
                 </Link>
             </div>
             <div className='text italicText'>{(t('OrLogInToPlayWithFriends'))}</div>
-            <div className='loginAndSignup'>
-                {showLoginOrSignup ? <Login/> : <Signup/>}
-                <a
-                    className='secondaryLink'
-                    onClick={() => setShowLoginOrSignup(!showLoginOrSignup)}
-                >
-                    {
-                        showLoginOrSignup
-                        ? t('DontHaveAnAccount') + ' ' + t('Signup')
-                        : t('AlreadyHaveAnAccount') + ' ' + t('Login')
-                    }
-                </a>
-            </div>
+            <Auth/>
         </div>
     );
 }
