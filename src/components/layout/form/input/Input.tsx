@@ -1,9 +1,17 @@
 import './Input.scss';
 
-function Input() {
+function Input(props: any) {
     return (
         <div className='formInput'>
-            Input
+            <label htmlFor={props.name}>{props.labelText}:</label>
+            <br/>
+            <input
+                id={props.name}
+                name={props.name}
+                type={props.type}
+                placeholder={props.placeholder}
+                onChange={props.handleOnChange}
+            />
         </div>
     );
 }

@@ -14,7 +14,7 @@ function Signup() {
             <div className='primaryText boldText bigText'>
                 {t('Signup')}
             </div>
-            <form onSubmit={(e) => submitSignup(e)}>
+            <form onSubmit={(e: any) => submitSignup(e)}>
                 <Input></Input>
                 <Button
                     type='submit'
