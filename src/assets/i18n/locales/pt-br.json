@@ -17,7 +17,9 @@
         "OrLogInToPlayWithFriends": "Ou fazer login para jogar com seus amigos",
         "Login": "Entrar",
         "Signup": "Cadastrar",
+        "Email": "E-mail",
         "Username": "Usuário",
+        "Password": "Senha",
         "AlreadyHaveAnAccount": "Já possui uma conta?",
         "DontHaveAnAccount": "Não possui uma conta ainda?"
     }

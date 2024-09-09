@@ -17,7 +17,9 @@
         "OrLogInToPlayWithFriends": "Or login to play with your friends",
         "Login": "Login",
         "Signup": "Signup",
+        "Email": "E-mail",
         "Username": "Username",
+        "Password": "Password",
         "AlreadyHaveAnAccount": "Already have an account?",
         "DontHaveAnAccount": "Don't have and account yet?"
     }

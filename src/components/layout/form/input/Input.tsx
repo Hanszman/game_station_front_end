@@ -2,7 +2,7 @@ import './Input.scss';
 
 function Input(props: any) {
     return (
-        <div className='formInput'>
+        <div className={`formInput ${props.classes}`}>
             <label htmlFor={props.name}>{props.labelText}:</label>
             <br/>
             <input

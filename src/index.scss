@@ -63,6 +63,7 @@ ul, li {
   label {
     color: $primary-color;
     margin-bottom: 5px;
+    float: left;
   }
   input, select {
     border: 1px solid #d3d3d3;
@@ -70,6 +71,10 @@ ul, li {
     outline: none;
     padding: 5px 10px;
   }
+}
+.formSpacing {
+  margin: 20px 0px;
+  width: 100%;
 }
 .hideLabel {
   margin: 3px 0px;
