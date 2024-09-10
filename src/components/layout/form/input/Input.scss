@@ -1,0 +1,25 @@
+@import '../../../../variables';
+.formInput {
+    position: relative;
+    .inputDiv {
+        display: flex;
+        align-items: center;
+        clear: left;
+        input {
+            width: 100%;
+        }
+        .inputWithIcon {
+            flex: 1;
+            padding-right: 40px;
+        }
+        .inputIcon {
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            background: none;
+            border: none;
+            outline: none;
+            color: $primary-color;
+        }
+    }
+}

@@ -5,13 +5,17 @@ function Input(props: any) {
         <div className={`formInput ${props.classes}`}>
             <label htmlFor={props.name}>{props.labelText}:</label>
             <br/>
-            <input
-                id={props.name}
-                name={props.name}
-                type={props.type}
-                placeholder={props.placeholder}
-                onChange={props.handleOnChange}
-            />
+            <div className='inputDiv'>
+                <input
+                    id={props.name}
+                    name={props.name}
+                    type={props.type}
+                    className={props.children ? 'inputWithIcon' : ''}
+                    placeholder={props.placeholder}
+                    onChange={props.handleOnChange}
+                />
+                <div className='inputIcon'>{props.children}</div>
+            </div>
         </div>
     );
 }

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { CiLogin } from 'react-icons/ci';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 // import { CiLogout } from 'react-icons/ci';
 import Button from '../../../layout/form/button/Button';
 import Input from '../../../layout/form/input/Input';
@@ -11,6 +12,7 @@ function Signup() {
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
     function submitSignup(event: any) {
         event.preventDefault();
         console.log('event', event);
@@ -21,8 +23,8 @@ function Signup() {
     return (
         <div className='signup'>
             <div className='titleText centerText'>
-                <div className='primaryText boldText bigText'>{t('Signup')}</div>
-                <div className='secondaryText'><CiLogin className='titleIcon'/></div>
+                <div className='secondaryText boldText bigText'>{t('Signup')}</div>
+                <div className='primaryText'><CiLogin className='titleIcon'/></div>
             </div>
             <form onSubmit={(e: any) => submitSignup(e)}>
                 <Input
@@ -42,16 +44,20 @@ function Signup() {
                     handleOnChange={(e: any) => setUsername(e.target.value)}
                 />
                 <Input
-                    type='password'
+                    type={showPassword ? 'text' : 'password'}
                     labelText={t('Password')}
                     name='password'
                     placeholder={t('Password')}
                     classes='formSpacing'
                     handleOnChange={(e: any) => setPassword(e.target.value)}
-                />
+                >
+                    <div onClick={() => setShowPassword(!showPassword)}>
+                        {showPassword ? <FaEyeSlash/> : <FaEye/>}
+                    </div>
+                </Input>
                 <Button
                     type='submit'
-                    classes='primaryButton formSpacing'
+                    classes='secondaryButton formSpacing'
                 >
                     {t('Signup')}
                 </Button>

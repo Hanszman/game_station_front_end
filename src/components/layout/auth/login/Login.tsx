@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { CiLogin } from 'react-icons/ci';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 // import { CiLogout } from 'react-icons/ci';
 import Button from '../../../layout/form/button/Button';
 import Input from '../../../layout/form/input/Input';
@@ -10,6 +11,7 @@ function Login() {
     const { t } = useTranslation();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
     function submitLogin(event: any) {
         event.preventDefault();
         console.log('event', event);
@@ -32,13 +34,17 @@ function Login() {
                     handleOnChange={(e: any) => setUsername(e.target.value)}
                 />
                 <Input
-                    type='password'
+                    type={showPassword ? 'text' : 'password'}
                     labelText={t('Password')}
                     name='password'
                     placeholder={t('Password')}
                     classes='formSpacing'
                     handleOnChange={(e: any) => setPassword(e.target.value)}
-                />
+                >
+                    <div onClick={() => setShowPassword(!showPassword)}>
+                        {showPassword ? <FaEyeSlash/> : <FaEye/>}
+                    </div>
+                </Input>
                 <Button
                     type='submit'
                     classes='primaryButton formSpacing'
