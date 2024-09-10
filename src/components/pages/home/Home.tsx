@@ -17,6 +17,7 @@ function Home() {
                 <Link className='primaryLink' to='/games'>
                     <FaGamepad className='linkIcon'/>
                     {t('checkOutGameList')}
+                    <FaGamepad className='linkIcon'/>
                 </Link>
             </div>
             <div className='text italicText'>{(t('OrLogInToPlayWithFriends'))}</div>

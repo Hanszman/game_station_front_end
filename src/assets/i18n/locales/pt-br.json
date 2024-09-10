@@ -14,6 +14,9 @@
         "GameStation": "Game Station!",
         "HereYouCanPlay": "Aqui você pode jogar alguns jogos divertidos",
         "checkOutGameList": "Veja a lista de jogos",
+        "GameList": "Lista de",
+        "ListGame": "Jogos",
+        "HaveFunWithTheGamesBellow": "Se divirta com os jogos abaixo",
         "OrLogInToPlayWithFriends": "Ou fazer login para jogar com seus amigos",
         "Login": "Entrar",
         "Signup": "Cadastrar",
@@ -21,6 +24,10 @@
         "Username": "Usuário",
         "Password": "Senha",
         "AlreadyHaveAnAccount": "Já possui uma conta?",
-        "DontHaveAnAccount": "Não possui uma conta ainda?"
+        "DontHaveAnAccount": "Não possui uma conta ainda?",
+        "UserProfile": "Perfil de",
+        "ProfileUser": "Usuário",
+        "HereYouCanCheckoutUserInfo": "Aqui você pode conferir suas informações de usuário",
+        "ButFirstLogin": "Mas primeiro, você deve fazer o login"
     }
 }

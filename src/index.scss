@@ -20,6 +20,10 @@ ul, li {
   padding: 0;
   margin: 0;
 }
+.titleText {
+  display: flex;
+  flex-direction: row;
+}
 .primaryText {
   color: $primary-color;
 }
@@ -33,6 +37,8 @@ ul, li {
   font-style: italic;
 }
 .centerText {
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 .smallText {
@@ -49,6 +55,11 @@ ul, li {
 }
 .flexWrap {
   flex-wrap: wrap;
+}
+.titleIcon {
+  width: 25px;
+  height: auto;
+  margin: 5px;
 }
 .centerContainer {
   display: flex;
@@ -138,5 +149,12 @@ a, .link {
       max-width: 150px;
       word-wrap: break-word;
     }
+  }
+}
+@media only screen and (max-width: 580px) {
+  .home {
+      .titleText {
+          flex-direction: column;
+      }
   }
 }

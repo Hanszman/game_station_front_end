@@ -1,11 +1,17 @@
-import { render, screen, waitFor } from '../../../test-utils';
+import { render, waitFor } from '../../../test-utils';
+import { MemoryRouter } from 'react-router-dom';
 import Games from './Games';
 
 describe('Games Component', () => {
     test('Should render Games component', async () => {
-        render(<Games/>);
+        const { container } = render(
+            <MemoryRouter>
+                <Games/>
+            </MemoryRouter>
+        );
         await waitFor(() => {
-            expect(screen.getByText(/games/i)).toBeInTheDocument();
+            const element = container.querySelector('.games');
+            expect(element).toBeInTheDocument();
         });
     });
 });

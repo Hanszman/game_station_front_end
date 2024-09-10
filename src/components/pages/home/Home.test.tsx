@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from '../../../test-utils';
+import { render, waitFor } from '../../../test-utils';
 import { MemoryRouter } from 'react-router-dom';
 import Home from './Home';
 

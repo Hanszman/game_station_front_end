@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { CiLogin } from 'react-icons/ci';
+// import { CiLogout } from 'react-icons/ci';
 import Button from '../../../layout/form/button/Button';
 import Input from '../../../layout/form/input/Input';
 import './Signup.scss';
@@ -18,12 +20,13 @@ function Signup() {
     }
     return (
         <div className='signup'>
-            <div className='primaryText boldText bigText'>
-                {t('Signup')}
+            <div className='titleText centerText'>
+                <div className='primaryText boldText bigText'>{t('Signup')}</div>
+                <div className='secondaryText'><CiLogin className='titleIcon'/></div>
             </div>
             <form onSubmit={(e: any) => submitSignup(e)}>
                 <Input
-                    type='text'
+                    type='email'
                     labelText={t('Email')}
                     name='email'
                     placeholder={t('Email')}
@@ -39,7 +42,7 @@ function Signup() {
                     handleOnChange={(e: any) => setUsername(e.target.value)}
                 />
                 <Input
-                    type='text'
+                    type='password'
                     labelText={t('Password')}
                     name='password'
                     placeholder={t('Password')}
