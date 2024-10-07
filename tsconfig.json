@@ -9,7 +9,6 @@
         "allowJs": true,
         "skipLibCheck": true,
         "noEmitOnError": false,
-        "suppressImplicitAnyIndexErrors": true,
         "ignoreDeprecations": "5.0",
         "checkJs": false,
         "esModuleInterop": true,
