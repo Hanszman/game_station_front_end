@@ -25,6 +25,7 @@
         "Email": "E-mail",
         "Username": "Username",
         "Password": "Password",
+        "InformAllRequiredFields": "All required fields must be informed",
         "AlreadyHaveAnAccount": "Already have an account?",
         "DontHaveAnAccount": "Don't have and account yet?",
         "UserProfile": "User",

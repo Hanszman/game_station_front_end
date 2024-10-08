@@ -5,6 +5,7 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 // import { CiLogout } from 'react-icons/ci';
 import Button from '../../../layout/form/button/Button';
 import Input from '../../../layout/form/input/Input';
+import Message from '../../../layout/form/message/Message';
 import './Signup.scss';
 
 function Signup() {
@@ -14,7 +15,9 @@ function Signup() {
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [message, setMessage] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const [showMessage, setShowMessage] = useState(false);
     function submitSignup(event: any) {
         event.preventDefault();
         console.log('event', event);
@@ -23,6 +26,13 @@ function Signup() {
         console.log('email', email);
         console.log('username', username);
         console.log('password', password);
+        if (name && email && username && password) {
+            setShowMessage(false);
+            console.log('Login');
+        } else {
+            setMessage(t('InformAllRequiredFields'));
+            setShowMessage(true);
+        }
     }
     return (
         <div className='signup'>
@@ -75,6 +85,7 @@ function Signup() {
                         {showPassword ? <FaEyeSlash/> : <FaEye/>}
                     </div>
                 </Input>
+                {showMessage ? <Message>{message}</Message> : null}
                 <Button
                     type='submit'
                     classes='secondaryButton formSpacing'

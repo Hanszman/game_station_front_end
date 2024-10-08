@@ -146,15 +146,14 @@ a, .link {
 @media only screen and (max-width: 500px) {
   .formInput {
     input, select {
-      max-width: 150px;
       word-wrap: break-word;
     }
   }
 }
 @media only screen and (max-width: 580px) {
   .home {
-      .titleText {
-          flex-direction: column;
-      }
+    .titleText {
+      flex-direction: column;
+    }
   }
 }

@@ -5,18 +5,28 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 // import { CiLogout } from 'react-icons/ci';
 import Button from '../../../layout/form/button/Button';
 import Input from '../../../layout/form/input/Input';
+import Message from '../../../layout/form/message/Message';
 import './Login.scss';
 
 function Login() {
     const { t } = useTranslation();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [message, setMessage] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const [showMessage, setShowMessage] = useState(false);
     function submitLogin(event: any) {
         event.preventDefault();
         console.log('event', event);
         console.log('username', username);
         console.log('password', password);
+        if (username && password) {
+            setShowMessage(false);
+            console.log('Login');
+        } else {
+            setMessage(t('InformAllRequiredFields'));
+            setShowMessage(true);
+        }
     }
     return (
         <div className='login'>
@@ -45,6 +55,7 @@ function Login() {
                         {showPassword ? <FaEyeSlash/> : <FaEye/>}
                     </div>
                 </Input>
+                {showMessage ? <Message>{message}</Message> : null}
                 <Button
                     type='submit'
                     classes='primaryButton formSpacing'
