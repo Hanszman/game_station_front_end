@@ -26,6 +26,8 @@
         "Username": "Username",
         "Password": "Password",
         "InformAllRequiredFields": "All required fields must be informed",
+        "WrongUserOrPassword": "The username or password you entered is incorrect.",
+        "ErrorRegisteringUser": "There was an error while registering the user.",
         "AlreadyHaveAnAccount": "Already have an account?",
         "DontHaveAnAccount": "Don't have and account yet?",
         "UserProfile": "User",

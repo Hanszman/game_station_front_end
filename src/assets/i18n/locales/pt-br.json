@@ -26,6 +26,8 @@
         "Username": "Usuário",
         "Password": "Senha",
         "InformAllRequiredFields": "Todos os campos obrigatórios precisam ser preenchidos",
+        "WrongUserOrPassword": "O usuário ou a senha informados estão incorretos.",
+        "ErrorRegisteringUser": "Ocorreu um erro ao cadastrar o usuário.",
         "AlreadyHaveAnAccount": "Já possui uma conta?",
         "DontHaveAnAccount": "Não possui uma conta ainda?",
         "UserProfile": "Perfil de",

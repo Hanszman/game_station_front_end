@@ -6,6 +6,7 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import Button from '../../../layout/form/button/Button';
 import Input from '../../../layout/form/input/Input';
 import Message from '../../../layout/form/message/Message';
+import { api } from '../../../../services/Api';
 import './Signup.scss';
 
 function Signup() {
@@ -28,7 +29,16 @@ function Signup() {
         console.log('password', password);
         if (name && email && username && password) {
             setShowMessage(false);
-            console.log('Login');
+            api.post('/user', {}).then(
+                (res: any) => {
+                    console.log('res', res);
+                },
+                (error: any) => {
+                    console.log('Error:', error);
+                    setMessage(t('ErrorRegisteringUser'));
+                    setShowMessage(true);
+                }
+            );
         } else {
             setMessage(t('InformAllRequiredFields'));
             setShowMessage(true);
@@ -43,7 +53,7 @@ function Signup() {
             <form onSubmit={(e: any) => submitSignup(e)}>
                 <Input
                     type='text'
-                    labelText={t('Name')}
+                    labelText={`${t('Name')}*`}
                     name='name'
                     placeholder={t('Name')}
                     classes='formSpacing'
@@ -59,7 +69,7 @@ function Signup() {
                 />
                 <Input
                     type='email'
-                    labelText={t('Email')}
+                    labelText={`${t('Email')}*`}
                     name='email'
                     placeholder={t('Email')}
                     classes='formSpacing'
@@ -67,7 +77,7 @@ function Signup() {
                 />
                 <Input
                     type='text'
-                    labelText={t('Username')}
+                    labelText={`${t('Username')}*`}
                     name='username'
                     placeholder={t('Username')}
                     classes='formSpacing'
@@ -75,7 +85,7 @@ function Signup() {
                 />
                 <Input
                     type={showPassword ? 'text' : 'password'}
-                    labelText={t('Password')}
+                    labelText={`${t('Password')}*`}
                     name='password'
                     placeholder={t('Password')}
                     classes='formSpacing'

@@ -8,12 +8,12 @@ import User from './components/pages/user/User';
 import { api } from './services/Api';
 import './App.scss';
 
-// TODO: Create layout for home
-// TODO: Create layout for games
+// TODO: Continue login logic with cryptography
+// TODO: Create DB tables for games and images
+// TODO: Continue layout for home
+// TODO: Continue layout for games
+// TODO: Continue layout for user
 // TODO: Create logic for games
-// TODO: Create DB with games, users and images
-// TODO: Create login logic with cryptography
-// TODO: Create layout for user
 // TODO: Create layout for chat
 
 function App() {

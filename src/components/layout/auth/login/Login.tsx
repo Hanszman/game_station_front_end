@@ -6,6 +6,7 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import Button from '../../../layout/form/button/Button';
 import Input from '../../../layout/form/input/Input';
 import Message from '../../../layout/form/message/Message';
+import { api } from '../../../../services/Api';
 import './Login.scss';
 
 function Login() {
@@ -22,7 +23,16 @@ function Login() {
         console.log('password', password);
         if (username && password) {
             setShowMessage(false);
-            console.log('Login');
+            api.post('/login', {}).then(
+                (res: any) => {
+                    console.log('res', res);
+                },
+                (error: any) => {
+                    console.log('Error:', error);
+                    setMessage(t('WrongUserOrPassword'));
+                    setShowMessage(true);
+                }
+            );
         } else {
             setMessage(t('InformAllRequiredFields'));
             setShowMessage(true);
@@ -37,7 +47,7 @@ function Login() {
             <form onSubmit={(e: any) => submitLogin(e)}>
                 <Input
                     type='text'
-                    labelText={t('Username')}
+                    labelText={`${t('Username')}*`}
                     name='username'
                     placeholder={t('Username')}
                     classes='formSpacing'
@@ -45,7 +55,7 @@ function Login() {
                 />
                 <Input
                     type={showPassword ? 'text' : 'password'}
-                    labelText={t('Password')}
+                    labelText={`${t('Password')}*`}
                     name='password'
                     placeholder={t('Password')}
                     classes='formSpacing'
