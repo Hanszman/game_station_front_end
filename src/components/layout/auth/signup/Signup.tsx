@@ -12,7 +12,7 @@ import './Signup.scss';
 function Signup() {
     const { t } = useTranslation();
     const [name, setName] = useState('');
-    const [lastName, setLastName] = useState('');
+    const [lastname, setLastname] = useState('');
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -21,15 +21,16 @@ function Signup() {
     const [showMessage, setShowMessage] = useState(false);
     function submitSignup(event: any) {
         event.preventDefault();
-        console.log('event', event);
-        console.log('name', name);
-        console.log('lastName', lastName);
-        console.log('email', email);
-        console.log('username', username);
-        console.log('password', password);
+        const body = {
+            name,
+            lastname,
+            email,
+            username,
+            password
+        }
         if (name && email && username && password) {
             setShowMessage(false);
-            api.post('/user', {}).then(
+            api.post('/user', body).then(
                 (res: any) => {
                     console.log('res', res);
                 },
@@ -62,10 +63,10 @@ function Signup() {
                 <Input
                     type='text'
                     labelText={t('LastName')}
-                    name='lastName'
+                    name='lastname'
                     placeholder={t('LastName')}
                     classes='formSpacing'
-                    handleOnChange={(e: any) => setLastName(e.target.value)}
+                    handleOnChange={(e: any) => setLastname(e.target.value)}
                 />
                 <Input
                     type='email'

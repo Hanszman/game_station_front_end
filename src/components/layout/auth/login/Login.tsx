@@ -18,12 +18,13 @@ function Login() {
     const [showMessage, setShowMessage] = useState(false);
     function submitLogin(event: any) {
         event.preventDefault();
-        console.log('event', event);
-        console.log('username', username);
-        console.log('password', password);
+        const body = {
+            username,
+            password
+        }
         if (username && password) {
             setShowMessage(false);
-            api.post('/login', {}).then(
+            api.post('/login', body).then(
                 (res: any) => {
                     console.log('res', res);
                 },
