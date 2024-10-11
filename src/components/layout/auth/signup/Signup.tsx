@@ -33,6 +33,15 @@ function Signup() {
             api.post('/user', body).then(
                 (res: any) => {
                     console.log('res', res);
+                    const user = res?.data?.data;
+                    if (user) {
+                        delete user.password;
+                        localStorage.setItem('user', JSON.stringify(user));
+                        // Fazer validação se está logado ou não e exibir Login/Signup ou Logout
+                    } else {
+                        setMessage(t('ErrorRegisteringUser'));
+                        setShowMessage(true);
+                    }
                 },
                 (error: any) => {
                     console.log('Error:', error);
