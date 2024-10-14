@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { FaGamepad } from 'react-icons/fa';
@@ -6,6 +7,13 @@ import './Home.scss';
 
 function Home() {
     const { t } = useTranslation();
+    const [userObj, setUserObj] = useState(null);
+    useEffect(() => {
+        const user = localStorage.getItem('user');
+        if (user) {
+            setUserObj(JSON.parse(user));
+        }
+    }, []);
     return (
         <div className='home centerContainer'>
             <div className='titleText'>
@@ -20,8 +28,16 @@ function Home() {
                     <FaGamepad className='linkIcon'/>
                 </Link>
             </div>
-            <div className='text italicText'>{(t('OrLogInToPlayWithFriends'))}</div>
-            <Auth/>
+            <div className='text italicText'>
+                { userObj ? (t('OrSendLinkToPlayWithFriends')) : (t('OrLogInToPlayWithFriends')) }
+            </div>
+            {
+                userObj ? (
+                    <div></div>
+                ) : (
+                    <Auth/>
+                )
+            }
         </div>
     );
 }

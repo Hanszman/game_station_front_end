@@ -34,10 +34,10 @@ function Signup() {
                 (res: any) => {
                     console.log('res', res);
                     const user = res?.data?.data;
-                    if (user) {
+                    if (user && user.username && user.name && user.email) {
                         delete user.password;
                         localStorage.setItem('user', JSON.stringify(user));
-                        // Fazer validação se está logado ou não e exibir Login/Signup ou Logout
+                        window.location.reload();
                     } else {
                         setMessage(t('ErrorRegisteringUser'));
                         setShowMessage(true);
