@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useAuth } from '../../../../context/AuthContext';
 import { CiLogin } from 'react-icons/ci';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 // import { CiLogout } from 'react-icons/ci';
@@ -11,6 +12,7 @@ import './Login.scss';
 
 function Login() {
     const { t } = useTranslation();
+    const { login } = useAuth();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
@@ -28,10 +30,9 @@ function Login() {
                 (res: any) => {
                     console.log('res', res);
                     const user = res?.data?.data;
-                    if (user && user.username && user.name && user.email) {
+                    if (user) {
                         delete user.password;
-                        localStorage.setItem('user', JSON.stringify(user));
-                        window.location.reload();
+                        login(user);
                     } else {
                         setMessage(t('WrongUserOrPassword'));
                         setShowMessage(true);

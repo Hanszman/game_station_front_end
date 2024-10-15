@@ -1,5 +1,6 @@
 declare module 'services';
 declare module 'components';
+declare module 'context';
 declare module '__mocks__';
 declare module 'assets';
 declare module '*.png';

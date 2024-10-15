@@ -26,6 +26,7 @@
         "paths": {
             "components/*": ["src/components/*"],
             "services/*": ["src/services/*"],
+            "context/*": ["src/context/*"],
             "__mocks__/*": ["src/__mocks__/*"],
             "assets/*": ["src/assets/*"]
         },

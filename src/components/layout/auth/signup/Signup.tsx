@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useAuth } from '../../../../context/AuthContext';
 import { CiLogin } from 'react-icons/ci';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 // import { CiLogout } from 'react-icons/ci';
@@ -11,6 +12,7 @@ import './Signup.scss';
 
 function Signup() {
     const { t } = useTranslation();
+    const { login } = useAuth();
     const [name, setName] = useState('');
     const [lastname, setLastname] = useState('');
     const [email, setEmail] = useState('');
@@ -34,10 +36,9 @@ function Signup() {
                 (res: any) => {
                     console.log('res', res);
                     const user = res?.data?.data;
-                    if (user && user.username && user.name && user.email) {
+                    if (user) {
                         delete user.password;
-                        localStorage.setItem('user', JSON.stringify(user));
-                        window.location.reload();
+                        login(user);
                     } else {
                         setMessage(t('ErrorRegisteringUser'));
                         setShowMessage(true);

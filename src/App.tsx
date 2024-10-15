@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
+import { AuthProvider } from './context/AuthContext';
 import Header from './components/layout/header/Header';
 import Footer from './components/layout/footer/Footer';
 import Home from './components/pages/home/Home';
@@ -24,17 +25,19 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <Router>
-        <Header/>
-        <div className='containerDisplay'>
-          <Routes>
-            <Route path='/' element={<Home/>}></Route>
-            <Route path='/games' element={<Games/>}></Route>
-            <Route path='/user' element={<User/>}></Route>
-          </Routes>
-        </div>
-        <Footer/>
-      </Router>
+      <AuthProvider>
+        <Router>
+          <Header/>
+          <div className='containerDisplay'>
+            <Routes>
+              <Route path='/' element={<Home/>}></Route>
+              <Route path='/games' element={<Games/>}></Route>
+              <Route path='/user' element={<User/>}></Route>
+            </Routes>
+          </div>
+          <Footer/>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }

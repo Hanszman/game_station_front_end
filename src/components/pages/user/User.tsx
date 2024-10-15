@@ -1,17 +1,11 @@
-import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useAuth } from '../../../context/AuthContext';
 import Auth from '../../layout/auth/Auth';
 import './User.scss';
 
 function User() {
     const { t } = useTranslation();
-    const [userObj, setUserObj] = useState(null);
-    useEffect(() => {
-        const user = localStorage.getItem('user');
-        if (user) {
-            setUserObj(JSON.parse(user));
-        }
-    }, []);
+    const { userObj } = useAuth();
     return (
         <div className='user centerContainer'>
             <div className='titleText'>
