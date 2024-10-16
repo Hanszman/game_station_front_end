@@ -27,6 +27,7 @@
             "components/*": ["src/components/*"],
             "services/*": ["src/services/*"],
             "context/*": ["src/context/*"],
+            "interfaces/*": ["src/interfaces/*"],
             "__mocks__/*": ["src/__mocks__/*"],
             "assets/*": ["src/assets/*"]
         },

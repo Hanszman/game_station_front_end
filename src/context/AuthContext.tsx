@@ -1,21 +1,6 @@
-// src/context/AuthContext.tsx
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-
-interface User {
-    id: number;
-    username: string;
-    password?: string;
-    oldPassword?: string;
-    email: string;
-    name: string;
-    lastname?: string;
-}
-
-interface AuthContextType {
-    userObj: User | null;
-    login: (user: User) => void;
-    logout: () => void;
-}
+import { User } from '../interfaces/user.interface';
+import { AuthContextType } from '../interfaces/auth-context.interface';
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
