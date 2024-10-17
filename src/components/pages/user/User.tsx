@@ -5,7 +5,7 @@ import './User.scss';
 
 function User() {
     const { t } = useTranslation();
-    const { userObj } = useAuth();
+    const { userObj, logout } = useAuth();
     return (
         <div className='user centerContainer'>
             <div className='titleText'>
@@ -18,7 +18,18 @@ function User() {
             </div>
             {
                 userObj ? (
-                    <div></div>
+                    <div className='userFields'>
+                        <div className='text'>{t('Name')}: {userObj.name}</div>
+                        <div className='text'>{t('Lastname')}: {userObj.lastname}</div>
+                        <div className='text'>{t('Email')}: {userObj.email}</div>
+                        <div className='text'>{t('Username')}: {userObj.username}</div>
+                        <div
+                            className='link primaryLink'
+                            onClick={() => logout()}
+                        >
+                            Sair
+                        </div>
+                    </div>
                 ) : (
                     <Auth/>
                 )
