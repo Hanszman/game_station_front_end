@@ -19,10 +19,22 @@ function User() {
             {
                 userObj ? (
                     <div className='userFields'>
-                        <div className='text'>{t('Name')}: {userObj.name}</div>
-                        <div className='text'>{t('Lastname')}: {userObj.lastname}</div>
-                        <div className='text'>{t('Email')}: {userObj.email}</div>
-                        <div className='text'>{t('Username')}: {userObj.username}</div>
+                        <div className='userInfo text'>
+                            <div className='boldText infoTitle'>{t('Name')}:</div>
+                            <div>{userObj.name}</div>
+                        </div>
+                        <div className='userInfo text'>
+                            <div className='boldText infoTitle'>{t('Lastname')}:</div>
+                            <div>{userObj.lastname}</div>
+                        </div>
+                        <div className='userInfo text'>
+                            <div className='boldText infoTitle'>{t('Email')}:</div>
+                            <div>{userObj.email}</div>
+                        </div>
+                        <div className='userInfo text'>
+                            <div className='boldText infoTitle'>{t('Username')}:</div>
+                            <div>{userObj.username}</div>
+                        </div>
                         <div
                             className='link primaryLink'
                             onClick={() => logout()}

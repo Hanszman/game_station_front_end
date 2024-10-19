@@ -9,13 +9,14 @@ import User from './components/pages/user/User';
 import { api } from './services/Api';
 import './App.scss';
 
-// TODO: Continue login logic with cryptography
 // TODO: Create DB tables for games and images
 // TODO: Continue layout for home
-// TODO: Continue layout for games
 // TODO: Continue layout for user
+// TODO: Continue layout for games
+// TODO: Create layout for each game
 // TODO: Create logic for games
 // TODO: Create layout for chat
+// TODO: Create 404 page not found
 
 function App() {
   useEffect(() => {
