@@ -6,6 +6,7 @@ import Footer from './components/layout/footer/Footer';
 import Home from './components/pages/home/Home';
 import Games from './components/pages/games/Games';
 import User from './components/pages/user/User';
+import NotFound from './components/pages/not-found/NotFound';
 import { api } from './services/Api';
 import './App.scss';
 
@@ -16,7 +17,6 @@ import './App.scss';
 // TODO: Create layout for each game
 // TODO: Create logic for games
 // TODO: Create layout for chat
-// TODO: Create 404 page not found
 
 function App() {
   useEffect(() => {
@@ -34,6 +34,7 @@ function App() {
               <Route path='/' element={<Home/>}></Route>
               <Route path='/games' element={<Games/>}></Route>
               <Route path='/user' element={<User/>}></Route>
+              <Route path='*' element={<NotFound />}></Route>
             </Routes>
           </div>
           <Footer/>

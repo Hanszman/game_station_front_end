@@ -35,6 +35,8 @@
         "UserProfile": "User",
         "ProfileUser": "Profile",
         "HereYouCanCheckoutUserInfo": "Here you can check out your user information",
-        "ButFirstLogin": "But first, you're gonna have to login"
+        "ButFirstLogin": "But first, you're gonna have to login",
+        "PageNotFound": "Page Not Found",
+        "ThePageDoesntExist": "The page you're looking for doesn't exist"
     }
 }
