@@ -10,13 +10,15 @@ import NotFound from './components/pages/not-found/NotFound';
 import { api } from './services/Api';
 import './App.scss';
 
-// TODO: Create DB tables for games and images
+// TODO: Create DB columns for images in game and user
 // TODO: Continue layout for home
 // TODO: Continue layout for user
 // TODO: Continue layout for games
 // TODO: Create layout for each game
 // TODO: Create logic for games
 // TODO: Create layout for chat
+// TODO: Create logic for chat
+// TODO: Deploy aplication and create DB (remove from docker) in AWS
 
 function App() {
   useEffect(() => {
