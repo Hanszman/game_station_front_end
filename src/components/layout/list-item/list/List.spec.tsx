@@ -6,7 +6,7 @@ describe('List Component', () => {
     test('Should render List component', async () => {
         const { container } = render(
             <MemoryRouter>
-                <List/>
+                <List list={[]}/>
             </MemoryRouter>
         );
         await waitFor(() => {

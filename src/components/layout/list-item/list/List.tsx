@@ -1,8 +1,17 @@
 import './List.scss';
 
-function List() {
+interface ListProps {
+    list: any[];
+}
+
+function List({ list }: ListProps) {
     return (
-        <div className='list'></div>
+        <div className='list'>
+            {list.map((item, index) => (
+                // Chamar componente item
+                <div key={index}>{item}</div>
+            ))}
+        </div>
     );
 }
 

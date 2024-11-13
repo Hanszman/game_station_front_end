@@ -9,7 +9,7 @@ function Games() {
     const [gameList, setGameList] = useState([]);
     useEffect(() => {
         api.get('/game').then((res: any) => {
-            console.log('res', res);
+            setGameList(res?.data?.data);
         });
     }, []);
     return (
@@ -18,7 +18,7 @@ function Games() {
                 <div className='primaryText boldText veryBigText'>{(t('GameList'))}&nbsp;</div>
                 <div className='secondaryText boldText veryBigText'>{(t('ListGame'))}</div>
                 <div className='centerContainer'>
-                    <List></List>
+                    <List list={gameList}></List>
                 </div>
             </div>
             <div className='text bigText'>{(t('HaveFunWithTheGamesBellow'))}</div>
