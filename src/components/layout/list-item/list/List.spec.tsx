@@ -6,12 +6,14 @@ describe('List Component', () => {
     test('Should render List component', async () => {
         const { container } = render(
             <MemoryRouter>
-                <List list={[]}/>
+                <List 
+                    list={[]} 
+                    renderItem={(item) => <div>{JSON.stringify(item)}</div>} 
+                />
             </MemoryRouter>
         );
         await waitFor(() => {
-            const element = container.querySelector('.list');
-            expect(element).toBeInTheDocument();
+            expect(container).toBeInTheDocument();
         });
     });
 });

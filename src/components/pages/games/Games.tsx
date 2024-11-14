@@ -15,13 +15,21 @@ function Games() {
     return (
         <div className='games centerContainer'>
             <div className='titleText'>
-                <div className='primaryText boldText veryBigText'>{(t('GameList'))}&nbsp;</div>
-                <div className='secondaryText boldText veryBigText'>{(t('ListGame'))}</div>
-                <div className='centerContainer'>
-                    <List list={gameList}></List>
-                </div>
+                <div className='primaryText boldText veryBigText'>{t('GameList')}&nbsp;</div>
+                <div className='secondaryText boldText veryBigText'>{t('ListGame')}</div>
             </div>
-            <div className='text bigText'>{(t('HaveFunWithTheGamesBellow'))}</div>
+            <div className='text bigText'>{t('HaveFunWithTheGamesBellow')}</div>
+            <div className='centerContainer'>
+                <List 
+                    list={gameList} 
+                    renderItem={(item) => (
+                        <>
+                            <div><strong>Nome:</strong> {item.name}</div>
+                            <div><strong>Gênero:</strong> {item.genre}</div>
+                        </>
+                    )}
+                />
+            </div>
         </div>
     );
 }

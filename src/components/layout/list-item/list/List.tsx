@@ -1,15 +1,18 @@
+// List.tsx
 import './List.scss';
 
 interface ListProps {
     list: any[];
+    renderItem: (item: any) => React.ReactNode;
 }
 
-function List({ list }: ListProps) {
+function List({ list, renderItem }: ListProps) {
     return (
         <div className='list'>
             {list.map((item, index) => (
-                // Chamar componente item
-                <div key={index}>{item}</div>
+                <div key={index}>
+                    {renderItem(item)}
+                </div>
             ))}
         </div>
     );

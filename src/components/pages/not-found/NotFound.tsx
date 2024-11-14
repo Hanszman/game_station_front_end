@@ -7,9 +7,9 @@ function NotFound() {
         <div className='notFound centerContainer'>
             <div className='titleText'>
                 <div className='primaryText boldText veryBigText'>404&nbsp;</div>
-                <div className='secondaryText boldText veryBigText'>{(t('PageNotFound'))}</div>
+                <div className='secondaryText boldText veryBigText'>{t('PageNotFound')}</div>
             </div>
-            <div className='text bigText'>{(t('ThePageDoesntExist'))}</div>
+            <div className='text bigText'>{t('ThePageDoesntExist')}</div>
         </div>
     );
 }

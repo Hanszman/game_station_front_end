@@ -11,10 +11,10 @@ function Home() {
     return (
         <div className='home centerContainer'>
             <div className='titleText'>
-                <div className='primaryText boldText veryBigText'>{(t('WelcomeTo'))}&nbsp;</div>
-                <div className='secondaryText boldText veryBigText'>{(t('GameStation'))}</div>
+                <div className='primaryText boldText veryBigText'>{t('WelcomeTo')}&nbsp;</div>
+                <div className='secondaryText boldText veryBigText'>{t('GameStation')}</div>
             </div>
-            <div className='text bigText'>{(t('HereYouCanPlay'))}</div>
+            <div className='text bigText'>{t('HereYouCanPlay')}</div>
             <div className='gameListLink'>
                 <Link className='primaryLink' to='/games'>
                     <FaGamepad className='linkIcon'/>
@@ -23,7 +23,7 @@ function Home() {
                 </Link>
             </div>
             <div className='text italicText'>
-                { userObj ? (t('OrSendLinkToPlayWithFriends')) : (t('OrLogInToPlayWithFriends')) }
+                { userObj ? t('OrSendLinkToPlayWithFriends') : t('OrLogInToPlayWithFriends') }
             </div>
             {
                 userObj ? (

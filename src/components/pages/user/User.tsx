@@ -9,12 +9,12 @@ function User() {
     return (
         <div className='user centerContainer'>
             <div className='titleText'>
-                <div className='primaryText boldText veryBigText'>{(t('UserProfile'))}&nbsp;</div>
-                <div className='secondaryText boldText veryBigText'>{(t('ProfileUser'))}</div>
+                <div className='primaryText boldText veryBigText'>{t('UserProfile')}&nbsp;</div>
+                <div className='secondaryText boldText veryBigText'>{t('ProfileUser')}</div>
             </div>
-            <div className='text bigText'>{(t('HereYouCanCheckoutUserInfo'))}</div>
+            <div className='text bigText'>{t('HereYouCanCheckoutUserInfo')}</div>
             <div className='text italicText'>
-                { userObj ? (<></>) : (t('ButFirstLogin')) }
+                { userObj ? (<></>) : t('ButFirstLogin') }
             </div>
             {
                 userObj ? (
