@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { api } from '../../../services/Api';
-import List from '../../layout/list-item/list/List';
+import List from '../../layout/list/List';
 import './Games.scss';
 
 function Games() {
@@ -12,6 +12,9 @@ function Games() {
             setGameList(res?.data?.data);
         });
     }, []);
+    function redirectGamePage(game: string) {
+        console.log(game);
+    }
     return (
         <div className='games centerContainer'>
             <div className='titleText'>
@@ -20,13 +23,14 @@ function Games() {
             </div>
             <div className='text bigText'>{t('HaveFunWithTheGamesBellow')}</div>
             <div className='centerContainer'>
-                <List 
-                    list={gameList} 
+                <List
+                    list={gameList}
+                    customClass='gameList'
                     renderItem={(item) => (
-                        <>
+                        <div className='gameListItem' onClick={() => redirectGamePage(item.name)}>
                             <div><strong>Nome:</strong> {item.name}</div>
                             <div><strong>Gênero:</strong> {item.genre}</div>
-                        </>
+                        </div>
                     )}
                 />
             </div>

@@ -1,14 +1,14 @@
-// List.tsx
 import './List.scss';
 
 interface ListProps {
     list: any[];
+    customClass: string;
     renderItem: (item: any) => React.ReactNode;
 }
 
-function List({ list, renderItem }: ListProps) {
+function List({ list, customClass, renderItem }: ListProps) {
     return (
-        <div className='list'>
+        <div className={`list ${customClass}`}>
             {list.map((item, index) => (
                 <div key={index}>
                     {renderItem(item)}
