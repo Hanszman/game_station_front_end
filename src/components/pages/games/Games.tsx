@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom'
 import { api } from '../../../services/Api';
 import List from '../../layout/list/List';
 import './Games.scss';
 
 function Games() {
     const { t } = useTranslation();
+    const navigate = useNavigate();
     const [gameList, setGameList] = useState([]);
     useEffect(() => {
         api.get('/game').then((res: any) => {
@@ -13,7 +15,7 @@ function Games() {
         });
     }, []);
     function redirectGamePage(game: string) {
-        console.log(game);
+        navigate(`/game/${game}`);
     }
     return (
         <div className='games centerContainer'>
