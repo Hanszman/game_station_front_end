@@ -15,7 +15,7 @@ function Games() {
         });
     }, []);
     function redirectGamePage(game: string) {
-        navigate(`/game/${game}`);
+        navigate(`/games/${game.toLowerCase()}`);
     }
     return (
         <div className='games centerContainer'>

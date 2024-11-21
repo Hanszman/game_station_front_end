@@ -4,8 +4,11 @@ import { AuthProvider } from './context/AuthContext';
 import Header from './components/layout/header/Header';
 import Footer from './components/layout/footer/Footer';
 import Home from './components/pages/home/Home';
-import Games from './components/pages/games/Games';
 import User from './components/pages/user/User';
+import Games from './components/pages/games/Games';
+import TicTacToe from './components/pages/games/game-list/tic-tac-toe/TicTacToe';
+import RockPaperScissors from './components/pages/games/game-list/rock-paper-scissors/RockPaperScissors';
+import EndlessRunner from './components/pages/games/game-list/endless-runner/EndlessRunner';
 import NotFound from './components/pages/not-found/NotFound';
 import { api } from './services/Api';
 import './App.scss';
@@ -34,8 +37,11 @@ function App() {
           <div className='containerDisplay'>
             <Routes>
               <Route path='/' element={<Home/>}></Route>
-              <Route path='/games' element={<Games/>}></Route>
               <Route path='/user' element={<User/>}></Route>
+              <Route path='/games' element={<Games/>}></Route>
+              <Route path='/games/tictactoe' element={<TicTacToe/>}></Route>
+              <Route path='/games/rockpaperscissors' element={<RockPaperScissors/>}></Route>
+              <Route path='/games/endlessrunner' element={<EndlessRunner/>}></Route>
               <Route path='*' element={<NotFound />}></Route>
             </Routes>
           </div>
