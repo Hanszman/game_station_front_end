@@ -30,8 +30,8 @@ function Games() {
                     customClass='gameList'
                     renderItem={(item) => (
                         <div className='gameListItem' onClick={() => redirectGamePage(item.name)}>
-                            <div><strong>Nome:</strong> {item.name}</div>
-                            <div><strong>Gênero:</strong> {item.genre}</div>
+                            <div className='primaryText bigText boldText'>{item.name}&nbsp;</div>
+                            <div className='secondaryText smallText'>{item.genre}</div>
                         </div>
                     )}
                 />

@@ -20,19 +20,19 @@ function User() {
                 userObj ? (
                     <div className='userFields'>
                         <div className='userInfo text'>
-                            <div className='boldText'>{t('Name')}:&nbsp;</div>
+                            <div className='secondaryText boldText'>{t('Name')}:&nbsp;</div>
                             <div>{userObj.name}</div>
                         </div>
                         <div className='userInfo text'>
-                            <div className='boldText'>{t('Lastname')}:&nbsp;</div>
+                            <div className='secondaryText boldText'>{t('Lastname')}:&nbsp;</div>
                             <div>{userObj.lastname}</div>
                         </div>
                         <div className='userInfo text'>
-                            <div className='boldText'>{t('Email')}:&nbsp;</div>
+                            <div className='secondaryText boldText'>{t('Email')}:&nbsp;</div>
                             <div>{userObj.email}</div>
                         </div>
                         <div className='userInfo text'>
-                            <div className='boldText'>{t('Username')}:&nbsp;</div>
+                            <div className='secondaryText boldText'>{t('Username')}:&nbsp;</div>
                             <div>{userObj.username}</div>
                         </div>
                         <div
