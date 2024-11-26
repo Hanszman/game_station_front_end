@@ -36,6 +36,11 @@
         "ProfileUser": "Usuário",
         "HereYouCanCheckoutUserInfo": "Aqui você pode conferir suas informações de usuário",
         "ButFirstLogin": "Mas primeiro, você deve fazer o login",
+        "TicTacToe": "Jogo da Velha",
+        "RockPaperScissors": "Pedra, Papel e Tesoura",
+        "EndlessRunner": "Corredor Infinito",
+        "Arcade": "Arcade",
+        "Strategy": "Estratégia",
         "PageNotFound": "Página Não Encontrada",
         "ThePageDoesntExist": "A página que você está procurando não existe"
     }

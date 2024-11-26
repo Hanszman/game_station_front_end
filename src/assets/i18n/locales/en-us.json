@@ -36,6 +36,11 @@
         "ProfileUser": "Profile",
         "HereYouCanCheckoutUserInfo": "Here you can check out your user information",
         "ButFirstLogin": "But first, you're gonna have to login",
+        "TicTacToe": "Tic Tac Toe",
+        "RockPaperScissors": "Rock Paper Scissors",
+        "EndlessRunner": "Endless Runner",
+        "Arcade": "Arcade",
+        "Strategy": "Strategy",
         "PageNotFound": "Page Not Found",
         "ThePageDoesntExist": "The page you're looking for doesn't exist"
     }
