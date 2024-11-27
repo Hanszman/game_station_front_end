@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import Chat from '../../../../layout/chat/Chat'
 import './TicTacToe.scss';
 
 function TicTacToe() {
@@ -7,6 +8,7 @@ function TicTacToe() {
         <div className='ticTacToe centerContainer'>
             <div className='primaryText boldText bigText'>{t('TicTacToe')}</div>
             <div>TESTE</div>
+            <Chat></Chat>
         </div>
     );
 }
